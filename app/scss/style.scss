@@ -3,20 +3,100 @@
  @import 'reset';
  @import 'global';
 
-//  .header {
-//   padding: 60px 0;
-//   &__inner {
-//     display: flex;
-//     justify-content: space-between;
-//   }
+.header {
+  padding: 60px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
  
-//  }
+ }
 
-//  .menu__list {
-//   display: flex;
-//   &__item + .menu__item {
-//     padding-left: 35px;
-//   }
- 
-//  }
+ .logo {
+  margin-right: 515px;
+ }
+
+
+
+.menu__item + .menu__item {
+   padding-left: 35px;
+ }
+
+.menu {
+  margin-right: 62px;
+  &__list {
+      display: flex;
+      padding-left: 0;
+    }
+  &__link--active {
+    color: $default;
+    font-weight: 400;
+    transition: all 0.5s, ease-in-out 0.5s;
+  }
+  
+  &__link--active:hover {
+    color: $accent;
+  }
+}
+
+ .user {
+  display: flex;
+  position: relative;
+  &__link + .user__link {
+    padding-left: 35px;
+   }
+
+ }
+
+ .user__link--search::before {
+   content: "";
+   position: absolute;
+   margin-right: 30px; 
+   width: 21px;
+   height: 23px;
+   left: -73px;
+   top: -11px;
+
+ }
+
+
+ .user__link--cart::before {
+    content: "";
+    position: absolute;
+    margin-right: 12px;
+    width: 21px;
+    height: 20px;
+    left: -18px;
+    top: -11px;
+
+  }
+
+ .user__link--search::before {
+    background-image: url("/image/Search btn.svg")
+ }
+
+
+ .user__link--cart::before {
+    background-image: url("/image/Cart icon.svg")
+ }
+
+ .user__namb {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  line-height: 14px;
+  color: #fff;
+  left: -3px;
+  top: -13px;
+  background-color: $accent;
+ }
+
+
+
+
+
  @import 'media';
