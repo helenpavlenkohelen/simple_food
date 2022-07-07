@@ -185,3 +185,105 @@ body {
   top: -13px;
   background-color: #FF6838;
 }
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__top--item {
+  max-width: 200px;
+  margin: 0;
+}
+
+.footer__top--item:last-child {
+  padding-left: 24px;
+}
+
+.footer__top--item .logo__img {
+  margin-bottom: 20px;
+}
+
+.footer__top--adress,
+.footer__top--phone,
+.footer__top--email {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #31352B;
+}
+
+.footer__top {
+  margin-right: 70px;
+}
+
+.form__item input {
+  max-width: 184px;
+  margin: 0 0 12px 0;
+  padding: 6px 0 6px 12px;
+  border-radius: 5px;
+  border: solid 1px #C2C2C2;
+  color: #C2C2C2;
+}
+
+.footer__form {
+  margin-right: 0;
+  max-width: 200px;
+}
+
+.button {
+  position: relative;
+  background-color: #FF6838;
+  padding: 10px 40px 10px 71px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("/image/Frame.svg");
+  background-repeat: no-repeat;
+  top: 11px;
+  left: 40px;
+}
+
+.footer__top--link {
+  margin-bottom: 20px;
+}
+
+.footer__top--list {
+  padding: 0;
+}
+
+.about {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #31352B;
+}
+
+.footer__bottom--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #31352B;
+}
