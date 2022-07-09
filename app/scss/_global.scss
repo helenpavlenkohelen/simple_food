@@ -3,6 +3,7 @@ body {
   font-style: normal;
   font-size: 20px;
   color: $default;
+  line-height: 1.5;
   @extend %quicksand-400;
 }
 
