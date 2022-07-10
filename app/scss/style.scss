@@ -177,10 +177,334 @@
    top: 4px;
    background-color: $circl;
  }
+
  }
 
+ .button {
+   position: relative;
+   background-color: $accent;
+   border-radius: 5px;
+   border: none;
+   line-height: 1.3;
+   color: #fff;
+   transition: all 0.5s, ease-in-out 0.5s;
+
+   &:focus {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+     background-color: $fone;
+     color: $accent;
+   }
+
+   &:hover {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+     background-color: $circl;
+     color: $accent;
+   }
+
+   &:active {
+     outline: none;
+     border-radius: 3px;
+     background-color: $fone;
+     color: $accent;
+   }
 
 
+   &.social--list {
+     display: flex;
+     justify-content: space-between;
+     width: 155px;
+     margin-right: 70px;
+     padding-left: 0;
+
+   }
+
+ }
+
+ .hero {
+   &__inner {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   &__advertising {
+     max-width: 450px;
+     padding-top: 158px;
+     margin-right: 10px;
+   }
+
+   &__title {
+     font-weight: 500;
+     font-size: 66px;
+     line-height: 1.3;
+
+   }
+
+   &__title--text {
+     color: $accent;
+     font-weight: 500;
+     font-size: 66px;
+     line-height: 1.3;
+     margin-bottom: 20px;
+     display: block;
+   }
+
+   &__text {
+     font-weight: 400;
+     font-size: 20px;
+     line-height: 1.5;
+     margin-bottom: 20px;
+   }
+
+
+   &__botton--order {
+     position: static;
+     padding: 12px 35px 12px 35px;
+     border-radius: 5px;
+     border: none;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 1.3;
+     margin-right: 30px;
+   }
+
+   &__botton--order:focus {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+     background-color: $fone;
+     color: $accent;
+   }
+
+   &__botton--order:hover {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+     background-color: $circl;
+     color: $accent;
+   }
+
+   &__botton--order:active {
+     outline: none;
+     border-radius: 3px;
+     background-color: $fone;
+     color: $accent;
+   }
+
+   &__link {
+     border-bottom: 1px solid $default;
+     padding-top: 2px;
+     transition: all 0.5s, ease-in-out 0.5s;
+   }
+
+   &__link:focus {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+     border-bottom: none;
+   }
+
+   &__link:hover {
+     outline: none;
+     border-radius: 3px;
+     border-bottom: none;
+     color: $accent;
+   }
+
+   &__link:active {
+     outline: none;
+     border-radius: 3px;
+     border-bottom: none;
+     color: $default;
+   }
+
+   &__img img {
+     display: inline;
+     margin-right: 33px;
+     max-width: 560px;
+     max-height: 660px;
+     background-color: $bacfon;
+
+   }
+
+ }
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.3;
+
+}
+
+.category {
+  // margin-bottom: 60px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 90px 40px 0;
+    
+  }
+  &__menu--burger,
+  &__menu--pizza,
+  &__menu--sandwich,
+  &__menu--asia,
+  &__menu--dish {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 23px 27px 23px 83px;
+    position: relative;
+    color: $default;
+    background-color: $circl;
+  }
+  &__menu--burger:focus,
+  &__menu--pizza:focus,
+  &__menu--sandwich:focus,
+  &__menu--asia:focus,
+  &__menu--dish:focus {
+    background-color: $circl;
+    color: $default;
+
+  }
+  &__menu--burger:hover,
+  &__menu--pizza:hover,
+  &__menu--sandwich:hover,
+  &__menu--asia:hover,
+  &__menu--dish:hover {
+    background-color: $fone;
+    color: $accent;
+  }
+  &__menu--burger:active,
+  &__menu--pizza:active,
+  &__menu--sandwich:active,
+  &__menu--asia:active,
+  &__menu--dish:active {
+    background-color: $accent;
+    color: $circl;
+  
+  }
+  &__menu--burger::before,
+  &__menu--pizza::before,
+  &__menu--sandwich::before,
+  &__menu--asia::before,
+  &__menu--dish::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 13px;
+    left: 24px;
+  }
+  &__menu--burger::before {
+    background-image: url("/image/burger.svg");
+    
+  }
+  &__menu--pizza::before {
+      background-image: url("/image/pizza 1.svg"); 
+  }
+  &__menu--sandwich::before {
+    background-image: url("/image/sandwich 1.svg");
+  }
+  &__menu--asia::before {
+    background-image: url("/image/asia.svg");
+  }
+  &__menu--dish::before {
+    background-image: url("/image/dish 1.svg");
+  }
+  &__product--list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 0 29px 0 0;
+    margin-bottom: 60px;
+
+  }
+  &__product--item {
+    display: flex;
+    max-width: 198px;
+    padding-bottom: 20px;
+
+  }
+  &__product--box {
+    background-color: $circl;
+    padding: 20px;
+  }
+  &__product--box:hover {
+    outline: 2px solid $accent;
+    border-radius: 3px;
+  }
+
+  &__price {
+    display: block;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 8px;
+    height: 40px;
+  } 
+  &__price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 9px;
+  }
+  &__button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+   
+  }
+
+  &__img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto ;
+    margin-bottom: 10px;
+  }
+  &__link {
+    display: block;
+    margin: 0 auto;
+    max-width: 133px;
+    border-bottom: 1px solid $default;
+    padding-top: 2px;
+    transition: all 0.5s, ease-in-out 0.5s;
+  }
+
+  &__link:focus {
+    outline: 2px solid $accent;
+    border-radius: 3px;
+  }
+
+  &__link:hover {
+   outline: none;
+   border-radius: 3px;
+   border-bottom: none;
+   color: $accent;
+  }
+
+  &__link:active {
+   outline: none;
+   border-radius: 3px;
+   color: $default;
+  }
+
+
+
+
+
+
+}
 
 
 
@@ -199,67 +523,6 @@
   border-radius: 3px;
 }
 
-.button {
-  position: relative;
-  background-color: $accent;
-  padding: 13px 40px 13px 73px;
-  border-radius: 5px;
-  border: none;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.3;
-  color: #fff;
-&:focus {
-  outline: 2px solid $accent;
-  border-radius: 3px;
-  background-color: $fone;
-  color: $accent;
-}
-&:hover {
-  outline: 2px solid $accent;
-  border-radius: 3px;
-  background-color: $circl;
-  color: $accent;
-}
-&:active {
-  outline: none;
-  border-radius: 3px;
-  background-color: $fone;
-  color: $accent;
-}
-
-&::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-image: url("/image/Frame.svg");
-  background-repeat: no-repeat;
-  top: 13px;
-  left: 40px; 
-}
-&:focus::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-image: url("/image/Group.svg");
-  background-repeat: no-repeat;
-  top: 13px;
-  left: 40px;
-}
-
-
-&.social--list {
-  display: flex;
-  justify-content: space-between;
-  width: 155px;
-  margin-right: 70px;
-  padding-left: 0;
-
-}
-
-}
 
 .footer {
 
@@ -297,6 +560,32 @@
     font-size: 16px;
     line-height: 32px;
     color: $social;
+  }
+ 
+  &__button::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("/image/Frame.svg");
+    background-repeat: no-repeat;
+    top: 13px;
+    left: 40px;
+  }
+  &__button {
+    padding: 13px 40px 13px 73px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &__button:focus::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-image: url("/image/Group.svg");
+    background-repeat: no-repeat;
+    top: 13px;
+    left: 40px;
   }
 
   &__form {
@@ -448,103 +737,6 @@
 
 }
 
-
-
-.hero {
- &__inner {
-   display: flex;
-   justify-content: space-between;
- }
-
- &__advertising {
-  max-width: 450px;
-  padding-top: 158px;
-  margin-right: 10px;
- }
-
- &__title {
-   font-weight: 500;
-   font-size: 66px;
-   line-height: 1.3;
-
- }
-  &__title--text {
-    color: $accent;
-    font-weight: 500;
-    font-size: 66px;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  &__text{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
- 
-
-  &__botton--order {
-    position: static;
-    padding: 12px 35px 12px 35px;
-    border-radius: 5px;
-    border: none;
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 1.3;
-    margin-right: 30px;
-  }
-
-  &__botton--order:focus {
-     outline: 2px solid $accent;
-     border-radius: 3px;
-     background-color: $fone;
-     color: $accent;
-  } 
-  &__botton--order:hover {
-     outline: 2px solid $accent;
-     border-radius: 3px;
-     background-color: $circl;
-     color: $accent;
-  }
-  &__botton--order:active {
-     outline: none;
-     border-radius: 3px;
-     background-color: $fone;
-     color: $accent;
-  }
-  &__link {
-     border-bottom: 1px solid $default;
-      padding-top: 2px;
-  }
-  &__link:focus {
-     outline: 2px solid $accent;
-    border-radius: 3px;
-    border-bottom: none;
-  }
-  &__link:hover {
-    outline: none;
-    border-radius: 3px;
-    border-bottom: none;
-    color: $accent;
-  }
-  &__link:active {
-    outline: none;
-    border-radius: 3px;
-    border-bottom: none;
-    color: $default;
- }
-
-  &__img img {
-    display: inline;
-    margin-right: 33px;
-    max-width: 560px;
-    max-height: 660px;
-
-  }
-
-}
 
 
 

@@ -5,10 +5,15 @@ body {
   color: $default;
   line-height: 1.5;
   @extend %quicksand-400;
+  background-color: $bacfon;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.section {
+  padding-bottom: 110px;
 }
