@@ -14,7 +14,8 @@
  }
 
  .logo {
-  margin-right: 475px;
+  display: flex;
+  margin-right: 515px;
  &:focus {
     outline: 2px solid $accent;
     border-radius: 3px;
@@ -27,42 +28,62 @@
  }
  }
 
-
+ .sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+ }
 
 
 
 .menu {
   margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
   &__list {
       display: flex;
+      justify-content: space-between;
       padding-left: 0;
+      margin-right: 50px;
     }
-  &__link--active {
-    color: $default;
+  &__link--active,
+  &__link {
+    color: $box;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 2.1;
     transition: all 0.5s, ease-in-out 0.5s;
   }
   
-  &__link--active:hover {
+  &__link--active:hover,
+  &__link:hover {
     color: $accent;
   }
-  &__link--active:focus {
+  &__link--active:focus,
+  &__link:focus {
     outline: 2px solid $accent;
     border-radius: 3px;
   }
 
 
   &__item+.menu__item {
-    padding-left: 35px;
+    padding-left: 45px;
   }
 
 
 }
 
- .user {
+ .user-nav {
   display: flex;
   position: relative;
-  &__link + .user__link {
+  &__link + .user-nav__link {
     padding-left: 34px;
   }
 
@@ -70,11 +91,17 @@
     width: 44px;
     height: 38px;
     margin-right: 12px;
+    border: 1px transparent;
+    background-color: $bacfon;
+    transition: all 0.5s, ease-in-out 0.5s;
   }
   &__link--cart {
     width: 44px;
     height: 38px;
     margin-right: 34px;
+    border: 1px transparent;
+    background-color: $bacfon;
+    transition: all 0.5s, ease-in-out 0.5s;
   }
 
 
@@ -88,6 +115,16 @@
     background-repeat: no-repeat;
   
   }
+  &__link--cart::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 23px;
+    left: 63px;
+    top: 7px;
+    background-repeat: no-repeat;
+  
+     }
 
   &__link--search:focus,
   &__link--cart:focus {
@@ -124,16 +161,6 @@
     outline: none;
   }
 
-  &__link--cart::before {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 23px;
-    left: 63px;
-    top: 7px;
-    background-repeat: no-repeat;
-  
-  }
   &__link--search::before {
     background-image: url("/image/Search btn.svg");
   }
@@ -337,15 +364,14 @@
 }
 
 .category {
-  // margin-bottom: 60px;
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   &__menu {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 90px 40px 0;
+    margin: 0 90px 60px 0;
     
   }
   &__menu--burger,
@@ -356,10 +382,14 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
-    padding: 23px 27px 23px 83px;
+    padding: 23px 27px 23px 89px;
     position: relative;
     color: $default;
     background-color: $circl;
+  }
+  &__menu--burger {
+    margin-top: 10px;
+
   }
   &__menu--burger:focus,
   &__menu--pizza:focus,
@@ -429,49 +459,55 @@
     padding-bottom: 20px;
 
   }
-  &__product--box {
-    background-color: $circl;
-    padding: 20px;
-  }
-  &__product--box:hover {
-    outline: 2px solid $accent;
-    border-radius: 3px;
-  }
+  // &__product--box,
+  // .product__card {
+  //   background-color: $circl;
+  //   padding: 20px;
+  // }
+  // &__product--box:hover,
+  // .product__card:hover {
+  //   outline: 2px solid $accent;
+  //   border-radius: 3px;
+  // }
 
-  &__price {
-    display: block;
-  }
-  &__text {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.3;
-    text-align: center;
-    margin-bottom: 8px;
-    height: 40px;
-  } 
-  &__price {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 1.4;
-    text-align: center;
-    margin-bottom: 9px;
-  }
-  &__button {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.3;
-    display: block;
-    margin: 0 auto;
-    padding: 8px 16px;
+  // &__price {
+  //   display: block;
+  // }
+  // &__text,
+  // .product__card--text {
+  //   font-weight: 400;
+  //   font-size: 15px;
+  //   line-height: 1.3;
+  //   text-align: center;
+  //   margin-bottom: 8px;
+  //   height: 40px;
+  // } 
+  // &__price,
+  // .product__card--price {
+  //   font-weight: 500;
+  //   font-size: 15px;
+  //   line-height: 1.4;
+  //   text-align: center;
+  //   margin-bottom: 9px;
+  // }
+  // &__button,
+  // .product__card--button {
+  //   font-weight: 400;
+  //   font-size: 14px;
+  //   line-height: 1.3;
+  //   display: block;
+  //   margin: 0 auto;
+  //   padding: 8px 16px;
    
-  }
+  // }
+  // &__img,
+  // .product__card--img {
+  //   width: 140px;
+  //   height: 140px;
+  //   margin: 0 auto ;
+  //   margin-bottom: 10px;
+  // }
 
-  &__img {
-    width: 140px;
-    height: 140px;
-    margin: 0 auto ;
-    margin-bottom: 10px;
-  }
   &__link {
     display: block;
     margin: 0 auto;
@@ -481,32 +517,65 @@
     transition: all 0.5s, ease-in-out 0.5s;
   }
 
-  &__link:focus {
+}
+
+.product__card {
+    background-color: $circl;
+    padding: 20px;
+&:hover {
     outline: 2px solid $accent;
     border-radius: 3px;
+}
+  &--img {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+      margin-bottom: 10px;
   }
+  &--button {
+       font-weight: 400;
+       font-size: 14px;
+       line-height: 1.3;
+       display: block;
+       margin: 0 auto;
+       padding: 8px 16px;
+  }
+  &--price {
+     display: block;
+     font-weight: 500;
+     font-size: 15px;
+     line-height: 1.4;
+     text-align: center;
+     margin-bottom: 9px;
+   }
+  &--text {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 8px;
+      height: 40px;
+    }
+}
 
-  &__link:hover {
+ .link:focus {
+   outline: 2px solid $accent;
+   border-radius: 3px;
+   border-bottom: 2px solid transparent;
+ }
+
+ .link:hover {
    outline: none;
    border-radius: 3px;
-   border-bottom: none;
-   color: $accent;
-  }
+   border-bottom: 1px solid transparent;
+   color: $accent ;
+ }
 
-  &__link:active {
+ .link:active {
    outline: none;
    border-radius: 3px;
    color: $default;
-  }
-
-
-
-
-
-
-}
-
-
+ }
 
 .form__item input {
   max-width: 184px;
@@ -531,19 +600,29 @@
     justify-content: space-between;
     margin-right: 109px;
     padding-bottom: 73px;
-
+   
   }
 
-  &__top--item {
-    max-width: 200px;
-    margin: 0;
+
+  &__top--link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px;
+    padding: 0 29px 0 0;
+    margin-bottom: 60px;
+    
   }
+
+  // &__top--item {
+  //   max-width: 200px;
+  //   margin: 0;
+  // }
 
   &__logo {
     margin-right: 102px;
   }
 
-  &__top--item:last-child {
+  &__top--item {
     padding-left: 24px;
   }
 
@@ -573,7 +652,7 @@
     left: 40px;
   }
   &__button {
-    padding: 13px 40px 13px 73px;
+    padding: 13px 35px 13px 73px;
     font-weight: 500;
     font-size: 14px;
   }
@@ -641,35 +720,48 @@
   &__top--link a:focus,
   &__top--adress:focus,
   &__top--phone:focus,
-  &__top--email:focus,
-  {
-  outline: 2px solid $accent;
-  border-radius: 3px;
-}
+  &__top--email:focus {
+   outline: 2px solid $accent;
+   border-radius: 3px;
+  }
 
-&__logo:focus {
-  outline: 2px solid $accent;
-  border-radius: 3px;
-}
+  &__logo:focus {
+   outline: 2px solid $accent;
+   border-radius: 3px;
+  }
+  &__top--link a,
+  &__top--adress,
+  &__top--phone,
+  &__top--email {
+   transition: all 0.5s, ease-in-out 0.5s;
+  }
+
+  &__top--link a:hover,
+  &__top--email:hover,
+  &__top--adress:hover,
+  &__top--phone:hover {
+   color: $accent;
+  }
 }
 
 .footer__top--list {
   padding: 0;
   .footer__top--link {
     margin-bottom: 13px;
+   
   
   }
 
 }
 
 
-.about {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.3;
-  color: $social;
+// .about {
+//   font-weight: 400;
+//   font-size: 18px;
+//   line-height: 1.3;
+//   color: $social;
   
-}
+// }
 
 
 .fasebook::before,
@@ -728,14 +820,14 @@
 
 
 
-.social--item {
-  width: 39px;
-  height: 39px;
-  border-radius: 2px;
-  display: inline;
-  margin-right: 0;
+// .social--item {
+//   width: 39px;
+//   height: 39px;
+//   border-radius: 2px;
+//   display: inline;
+//   margin-right: 0;
 
-}
+// }
 
 
 
