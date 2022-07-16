@@ -109,5 +109,4 @@ exports.cleanDict = cleanDict;
 exports.svgSprites = svgSprites;
 exports.build = series(cleanDict, image, build);
 
-
 exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
