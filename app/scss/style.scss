@@ -28,21 +28,6 @@
  }
  }
 
- .sr-only {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
-   white-space: nowrap;
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden;
- }
-
-
-
 .menu {
   margin-right: 20px;
   display: flex;
@@ -255,7 +240,7 @@
      justify-content: space-between;
    }
 
-   &__advertising {
+   &__item {
      max-width: 450px;
      padding-top: 158px;
      margin-right: 10px;
@@ -268,7 +253,7 @@
 
    }
 
-   &__title--text {
+   &__title-text {
      color: $accent;
      font-weight: 500;
      font-size: 66px;
@@ -285,7 +270,7 @@
    }
 
 
-   &__botton--order {
+   &__botton-order {
      position: static;
      padding: 12px 35px 12px 35px;
      border-radius: 5px;
@@ -296,21 +281,21 @@
      margin-right: 30px;
    }
 
-   &__botton--order:focus {
+   &__botton-order:focus {
      outline: 2px solid $accent;
      border-radius: 3px;
      background-color: $fone;
      color: $accent;
    }
 
-   &__botton--order:hover {
+   &__botton-order:hover {
      outline: 2px solid $accent;
      border-radius: 3px;
      background-color: $circl;
      color: $accent;
    }
 
-   &__botton--order:active {
+   &__botton-order:active {
      outline: none;
      border-radius: 3px;
      background-color: $fone;
@@ -346,8 +331,6 @@
    &__img img {
      display: inline;
      margin-right: 33px;
-     max-width: 560px;
-     max-height: 660px;
      background-color: $bacfon;
 
    }
@@ -371,14 +354,14 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 90px 60px 0;
+    margin: 0 60px 60px 0;
     
   }
-  &__menu--burger,
-  &__menu--pizza,
-  &__menu--sandwich,
-  &__menu--asia,
-  &__menu--dish {
+  &__menu-burger,
+  &__menu-pizza,
+  &__menu-sandwich,
+  &__menu-asia,
+  &__menu-dish {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.3;
@@ -387,41 +370,41 @@
     color: $default;
     background-color: $circl;
   }
-  &__menu--burger {
+  &__menu-burger {
     margin-top: 10px;
 
   }
-  &__menu--burger:focus,
-  &__menu--pizza:focus,
-  &__menu--sandwich:focus,
-  &__menu--asia:focus,
-  &__menu--dish:focus {
+  &__menu-burger:focus,
+  &__menu-pizza:focus,
+  &__menu-sandwich:focus,
+  &__menu-asia:focus,
+  &__menu-dish:focus {
     background-color: $circl;
     color: $default;
 
   }
-  &__menu--burger:hover,
-  &__menu--pizza:hover,
-  &__menu--sandwich:hover,
-  &__menu--asia:hover,
-  &__menu--dish:hover {
+  &__menu-burger:hover,
+  &__menu-pizza:hover,
+  &__menu-sandwich:hover,
+  &__menu-asia:hover,
+  &__menu-dish:hover {
     background-color: $fone;
     color: $accent;
   }
-  &__menu--burger:active,
-  &__menu--pizza:active,
-  &__menu--sandwich:active,
-  &__menu--asia:active,
-  &__menu--dish:active {
+  &__menu-burger:active,
+  &__menu-pizza:active,
+  &__menu-sandwich:active,
+  &__menu-asia:active,
+  &__menu-dish:active {
     background-color: $accent;
     color: $circl;
   
   }
-  &__menu--burger::before,
-  &__menu--pizza::before,
-  &__menu--sandwich::before,
-  &__menu--asia::before,
-  &__menu--dish::before {
+  &__menu-burger::before,
+  &__menu-pizza::before,
+  &__menu-sandwich::before,
+  &__menu-asia::before,
+  &__menu-dish::before {
     content: "";
     position: absolute;
     width: 44px;
@@ -429,23 +412,23 @@
     top: 13px;
     left: 24px;
   }
-  &__menu--burger::before {
+  &__menu-burger::before {
     background-image: url("/image/burger.svg");
     
   }
-  &__menu--pizza::before {
+  &__menu-pizza::before {
       background-image: url("/image/pizza 1.svg"); 
   }
-  &__menu--sandwich::before {
+  &__menu-sandwich::before {
     background-image: url("/image/sandwich 1.svg");
   }
-  &__menu--asia::before {
+  &__menu-asia::before {
     background-image: url("/image/asia.svg");
   }
-  &__menu--dish::before {
+  &__menu-dish::before {
     background-image: url("/image/dish 1.svg");
   }
-  &__product--list {
+  &__product-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
@@ -453,66 +436,19 @@
     margin-bottom: 60px;
 
   }
-  &__product--item {
-    display: flex;
+  &__product-item {
     max-width: 198px;
     padding-bottom: 20px;
 
   }
-  // &__product--box,
-  // .product__card {
-  //   background-color: $circl;
-  //   padding: 20px;
-  // }
-  // &__product--box:hover,
-  // .product__card:hover {
-  //   outline: 2px solid $accent;
-  //   border-radius: 3px;
-  // }
-
-  // &__price {
-  //   display: block;
-  // }
-  // &__text,
-  // .product__card--text {
-  //   font-weight: 400;
-  //   font-size: 15px;
-  //   line-height: 1.3;
-  //   text-align: center;
-  //   margin-bottom: 8px;
-  //   height: 40px;
-  // } 
-  // &__price,
-  // .product__card--price {
-  //   font-weight: 500;
-  //   font-size: 15px;
-  //   line-height: 1.4;
-  //   text-align: center;
-  //   margin-bottom: 9px;
-  // }
-  // &__button,
-  // .product__card--button {
-  //   font-weight: 400;
-  //   font-size: 14px;
-  //   line-height: 1.3;
-  //   display: block;
-  //   margin: 0 auto;
-  //   padding: 8px 16px;
-   
-  // }
-  // &__img,
-  // .product__card--img {
-  //   width: 140px;
-  //   height: 140px;
-  //   margin: 0 auto ;
-  //   margin-bottom: 10px;
-  // }
-
+ 
   &__link {
     display: block;
     margin: 0 auto;
-    max-width: 133px;
+    max-width: 155px;
+    border: none;
     border-bottom: 1px solid $default;
+    background-color: $bacfon;
     padding-top: 2px;
     transition: all 0.5s, ease-in-out 0.5s;
   }
@@ -526,29 +462,28 @@
     outline: 2px solid $accent;
     border-radius: 3px;
 }
-  &--img {
-      width: 140px;
-      height: 140px;
+  &-img {
       margin: 0 auto;
       margin-bottom: 10px;
   }
-  &--button {
-       font-weight: 400;
-       font-size: 14px;
-       line-height: 1.3;
-       display: block;
-       margin: 0 auto;
-       padding: 8px 16px;
+  &-button {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.3;
+      display: block;
+      margin: 0 auto;
+      padding: 8px 16px;
   }
-  &--price {
-     display: block;
-     font-weight: 500;
-     font-size: 15px;
-     line-height: 1.4;
-     text-align: center;
-     margin-bottom: 9px;
+  &-price {
+      display: block;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.4;
+      text-align: center;
+      margin-bottom: 9px;
    }
-  &--text {
+  &-text {
+      width: 175px;
       font-weight: 400;
       font-size: 15px;
       line-height: 1.3;
@@ -577,62 +512,60 @@
    color: $default;
  }
 
-.form__item input {
-  max-width: 184px;
-  margin: 0 0 12px 0;
-  padding: 10px 0 9px 14px;
-  border-radius: 5px;
-  border: solid 1px $decor;
-  color: $decor;
-}
 
-
-.form__item input:focus {
-  outline: 2px solid $accent;
-  border-radius: 3px;
-}
 
 
 .footer {
 
-  &__top {
+  &__inner {
     display: flex;
     justify-content: space-between;
     margin-right: 109px;
-    padding-bottom: 73px;
+    padding-bottom: 80px;
    
   }
+  
 
-
-  &__top--list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-    padding: 0 29px 0 0;
-    margin-bottom: 60px;
-    
+  &__inner-info {
+    margin-right: 16px;
   }
 
-  // &__top--item {
-  //   max-width: 200px;
-  //   margin: 0;
-  // }
 
-  &__logo {
-    margin-right: 102px;
+  &__input:focus {
+    outline: 2px solid $accent;
+    border-radius: 3px;
   }
 
-  &__top--item {
+  &__input {
+    max-width: 184px;
+    margin: 0 0 5px 0;
+    padding: 10px 0 9px 14px;
+    border-radius: 5px;
+    border: solid 1px $decor;
+    color: $decor;
+  }
+
+  &__top-item {
+    max-width: 200px;
+    margin: 0;
+  }
+
+  &__logo .logo__img {
+    margin-bottom: 28px;
+  }
+
+  &__top-item {
     padding-left: 24px;
   }
-
-  &__top--item .logo__img {
-    margin-bottom: 6px;
+  &__top-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px 0 0;
   }
 
-  &__top--adress,
-  &__top--phone,
-  &__top--email {
+  &__top-adress,
+  &__top-phone,
+  &__top-email {
     display: block;
     margin-bottom: 15px;
     font-weight: 400;
@@ -672,15 +605,15 @@
     max-width: 200px;
   }
 
-  &__top--adress,
-  &__top--phone,
-  &__top--email {
+  &__top-adress,
+  &__top-phone,
+  &__top-email {
     position: relative;
   }
 
-  &__top--adress::before,
-  &__top--phone::before,
-  &__top--email::before {
+  &__top-adress::before,
+  &__top-phone::before,
+  &__top-email::before {
     content: "";
     position: absolute;
     width: 24px;
@@ -690,18 +623,18 @@
 
   }
 
-  &__top--adress::before {
+  &__top-adress::before {
 
     background-image: url("/image/Location.svg")
   }
 
 
-  &__top--phone::before {
+  &__top-phone::before {
     background-image: url("/image/Calling.svg")
   }
 
 
-  &__top--email::before {
+  &__top-email::before {
     background-image: url("/image/Message.svg")
   }
 
@@ -717,10 +650,10 @@
     line-height: 1;
   }
 
-  &__top--link a:focus,
-  &__top--adress:focus,
-  &__top--phone:focus,
-  &__top--email:focus {
+  &__top-link a:focus,
+  &__top-adress:focus,
+  &__top-phone:focus,
+  &__top-email:focus {
    outline: 2px solid $accent;
    border-radius: 3px;
   }
@@ -729,24 +662,24 @@
    outline: 2px solid $accent;
    border-radius: 3px;
   }
-  &__top--link a,
-  &__top--adress,
-  &__top--phone,
-  &__top--email {
+  &__top-link a,
+  &__top-adress,
+  &__top-phone,
+  &__top-email {
    transition: all 0.5s, ease-in-out 0.5s;
   }
 
-  &__top--link a:hover,
-  &__top--email:hover,
-  &__top--adress:hover,
-  &__top--phone:hover {
+  &__top-link a:hover,
+  &__top-email:hover,
+  &__top-adress:hover,
+  &__top-phone:hover {
    color: $accent;
   }
 }
 
-.footer__top--list {
+.footer__top-list {
   padding: 0;
-  .footer__top--link {
+  .footer__top-link {
     margin-bottom: 13px;
    
   
@@ -755,13 +688,13 @@
 }
 
 
-// .about {
-//   font-weight: 400;
-//   font-size: 18px;
-//   line-height: 1.3;
-//   color: $social;
+.about {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: $social;
   
-// }
+}
 
 
 .fasebook::before,
@@ -820,14 +753,14 @@
 
 
 
-// .social--item {
-//   width: 39px;
-//   height: 39px;
-//   border-radius: 2px;
-//   display: inline;
-//   margin-right: 0;
+.social-item {
+  width: 39px;
+  height: 39px;
+  border-radius: 2px;
+  display: inline;
+  margin-right: 0;
 
-// }
+}
 
 
 
