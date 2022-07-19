@@ -41,11 +41,18 @@
 
             <div class="user-nav">
               <span class="sr-only">найти на сайте товар</span>
-              <button class="user-nav__link user-nav__link--search" type="button"></button>
-
+              <button class="user-nav__link" type="button">
+                <svg class="user-nav__link--search">
+                  <use xlink:href="image/sprite.svg#icon-Search" width="21" height="22" viewBox="0 0 21 22"></use>
+               </svg>
+              
+              </button>
+             
               <span class="sr-only">перейти на страницу корзины</span>
-              <button class="user-nav__link user-nav__link--cart" type="button">
-                
+              <button class="user-nav__link" type="button">
+                <svg class="user-nav__link--cart">
+                  <use xlink:href="image/sprite.svg#icon-cart" width="21" height="22" viewBox="0 0 21 22"></use>
+                </svg>
                 <span class="sr-only">количество выбранных товаров в корзине</span>
                 <span class="user-nav__namb">4</span>
               </button>
@@ -61,8 +68,7 @@
   </header>
   <main class="main">
 
-    <section class="section hero">
-
+    <section class="section hero"> 
      <div class="container">
 
       <div class="hero__inner">
@@ -107,7 +113,11 @@
          <ul class="category__menu">
 
            <li class="category__menu-list">
-              <a class="button category__menu-burger" href="#burger">Бургеры</a>
+              <a class="button category__menu-burger" href="#burger">
+                <svg class="bur">
+                  <use xlink:href="image/sprite.svg#icon-burger" width="44" height="44" viewBox="0 0 44 44"></use>
+                </svg>Бургеры
+              </a>
            </li>
 
            <li class="category__menu-list">

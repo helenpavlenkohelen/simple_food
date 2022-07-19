@@ -68,11 +68,12 @@
  .user-nav {
   display: flex;
   position: relative;
+ 
   &__link + .user-nav__link {
     padding-left: 34px;
   }
 
-  &__link--search {
+  &__link {
     width: 44px;
     height: 38px;
     margin-right: 12px;
@@ -80,88 +81,68 @@
     background-color: $bacfon;
     transition: all 0.5s, ease-in-out 0.5s;
   }
+
+
+  &__link--search {
+      width: 44px;
+      height: 38px;
+      transition: all 0.5s, ease-in-out 0.5s;
+      border-radius: 3px;
+      position: absolute;
+      top: 6px;
+      left: 15px;
+  
+  }
+
+
+  &__link--search:focus {
+      outline: 2px solid $accent;
+      border-radius: 3px;
+      background-color: $fone;
+  }
+
+
+  &__link--search:hover {
+      background-color: $accent;
+      border-radius: 3px;
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
+  }
+
+  &__link--search:active {
+      background-color: $fone;
+      outline: none;
+  
+  }
+
   &__link--cart {
-    width: 44px;
-    height: 38px;
-    margin-right: 34px;
-    border: 1px transparent;
-    background-color: $bacfon;
-    transition: all 0.5s, ease-in-out 0.5s;
+       width: 44px;
+      height: 38px;
+      transition: all 0.5s, ease-in-out 0.5s;
+      border-radius: 3px;
+      position: absolute;
+      top: 6px;
+      left: 65px;
   }
 
 
-  &__link--search::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 23px;
-    left: 9px;
-    top: 5px;
-    background-repeat: no-repeat;
-  
-  }
-  &__link--cart::before {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 23px;
-    left: 63px;
-    top: 7px;
-    background-repeat: no-repeat;
-  
-     }
-
-  &__link--search:focus,
   &__link--cart:focus {
     outline: 2px solid $accent;
     border-radius: 3px;
     background-color: $fone;
   }
-  &__link--search:hover {
-    background-color: $accent;
-    background-image: url("/image/search_w.svg");
-    background-repeat: no-repeat;
-    border-radius: 3px;
-    top: 50%;
-    left: 50%;
-  }
+ 
   &__link--cart:hover {
     background-color: $accent;
-    background-image: url("/image/Cart_w.svg");
-    background-repeat: no-repeat;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
     border-radius: 3px;
-    top: 50%;
-    left: 50%;
   }
 
-  &__link--search:active {
-   background-color: $fone;
-   background-image: url("/image/Search btn.svg");
-   outline:none;
-  }
 
   &__link--cart:active {
     background-color: $fone;
-    background-image: url("/image/Cart icon.svg");
     outline: none;
   }
 
-  &__link--search::before {
-    background-image: url("/image/Search btn.svg");
-  }
-  &__link--search:hover::before {
-     background-image: url("/image/Search btn.svg");
-     display: none;
-  }
-
-  &__link--cart::before {
-    background-image: url("/image/Cart icon.svg")
-  }
-
-  &__link--cart:hover::before {
-    background-image: url("/image/Search btn.svg");
-    display: none;
-  }
   &__namb {
     position: absolute;
     width: 14px;
@@ -176,21 +157,22 @@
     background-color: $accent;
   }
 
- &__namb:hover {
-   position: absolute;
-   width: 14px;
-   height: 14px;
-   border-radius: 50%;
-   font-size: 10px;
-   text-align: center;
-   line-height: 14px;
-   color: $accent;
-   left: 79px;
-   top: 4px;
-   background-color: $circl;
+  &__namb:hover {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    line-height: 14px;
+    color: $accent;
+    left: 79px;
+    top: 4px;
+    background-color: $circl;
  }
 
  }
+
 
  .button {
    position: relative;
@@ -234,7 +216,25 @@
 
  }
 
+ .bur {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 14px;
+  top: 12px;
+ &:hover { 
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
+   
+ }
+ }
+
  .hero {
+    // max-width: 450px;
+    // padding-top: 158px;
+    // margin-right: 10px;
+    // position: absolute;
+  
+
    &__inner {
      display: flex;
      justify-content: space-between;
@@ -400,7 +400,7 @@
     color: $circl;
   
   }
-  &__menu-burger::before,
+  // &__menu-burger::before,
   &__menu-pizza::before,
   &__menu-sandwich::before,
   &__menu-asia::before,
@@ -761,10 +761,6 @@
   margin-right: 0;
 
 }
-
-
-
-
 
 
 
