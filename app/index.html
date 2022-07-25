@@ -41,21 +41,21 @@
 
             <div class="user-nav">
               <span class="sr-only">найти на сайте товар</span>
-              <button class="user-nav__link" type="button">
-                <svg class="user-nav__link--search">
-                  <use xlink:href="image/sprite.svg#icon-Search" width="21" height="22" viewBox="0 0 21 22"></use>
+              <a class="user-nav__link-search" href="#">
+                <!-- <svg id="search" class="user-nav__link--search">
+                  <use xlink:href="image/sprite.svg#icon-search" width="21" height="22" viewBox="0 0 21 22"></use>
                </svg>
-              
-              </button>
+               -->
+              </a>
              
               <span class="sr-only">перейти на страницу корзины</span>
-              <button class="user-nav__link" type="button">
+              <a class="user-nav__link" href="#">
                 <svg class="user-nav__link--cart">
                   <use xlink:href="image/sprite.svg#icon-cart" width="21" height="22" viewBox="0 0 21 22"></use>
                 </svg>
                 <span class="sr-only">количество выбранных товаров в корзине</span>
                 <span class="user-nav__namb">4</span>
-              </button>
+              </a>
 
             </div>
 
@@ -68,17 +68,16 @@
   </header>
   <main class="main">
 
-    <section class="section hero"> 
-     <div class="container">
+    <section class="section hero" style="background-image: url('./image/scooter guy_.png');">
 
-      <div class="hero__inner">
+      <div class="container">
 
-        <div class="hero__item" style="background-image:url(/image/Scooter Guy.jpg);">
-        <h1 class="sr-only">самая быстрая доставка еды</h2>
-        <h2 class="hero__title">
+        <div class="hero__item"> 
+         <h1 class="sr-only">самая быстрая доставка еды</h1>
+         <h2 class="hero__title">
           ДОСТАВКА
-        </h2>
-        <span class="hero__title-text">ЗА 15 МИНУТ</span>
+         </h2>
+         <span class="hero__title-text">ЗА 15 МИНУТ</span>
          
 
          <div class="hero__text">
@@ -93,17 +92,9 @@
          </div>
 
         </div>
-
-        <div class="hero__img">
-         <img src="image/Scooter Guy.jpg" alt="изображение" width="560" height="660">
-        </div>
-
       </div>
-
-     </div>
-
     </section>
-
+    
     <section class="section category">
 
       <div class="container">
@@ -112,28 +103,34 @@
 
          <ul class="category__menu">
 
-           <li class="category__menu-list">
+           <li class="category__menu-list category__burger">
               <a class="button category__menu-burger" href="#burger">
-                <svg class="bur">
-                  <use xlink:href="image/sprite.svg#icon-burger" width="44" height="44" viewBox="0 0 44 44"></use>
-                </svg>Бургеры
+                Бургеры
               </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-pizza" href="#pizza">Пицца</a>
+              <a class="button category__menu-pizza" href="#pizza">
+                Пицца
+              </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-sandwich" href="#sandvich">Сендвичи</a>
+              <a class="button category__menu-sandwich" href="#sandvich">
+                Сендвичи
+              </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-asia" href="#asia">Азиатская кухня</a>
+              <a class="button category__menu-asia" href="#asia">
+                Азиатская кухня
+              </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-dish" href="#dish">Cеты</a>
+              <a class="button category__menu-dish" href="#dish">
+                Сеты
+              </a>
            </li>
 
          </ul>
@@ -157,7 +154,7 @@
 
            <li class="categoty__product-item">
             <article class="product__card">
-              <a href="#" id="burger">
+              <a href="#" id="burgers">
                 <img src="image/burger_biv.jpg" alt="Бифбургер" class="product__card-img" width="140" height="140">
                 <h3 class="product__card-text">Бифбургер</h3>
               </a>
@@ -183,7 +180,7 @@
 
            <li class="categoty__product-item">
             <article class="product__card">
-              <a href="#" id="sandvich">
+              <a href="#" id="sandviches">
                 <img src="image/burger_black.jpg" alt="Черный гамбургер" class="product__card-img" width="140" height="140">
                 <h3 class="product__card-text">Черный гамбургер</h3>
               </a>
@@ -209,7 +206,7 @@
 
            <li class="categoty__product-item">
             <article class="product__card">
-              <a href="#" id="pizza">
+              <a href="#" id="pizzas">
                 <img src="image/burger.jpg" alt="Чизбургер с листьями салата" class="product__card-img" width="140" height="140">
                 <h3 class="product__card-text">Чизбургер с листьями салата</h3>
               </a>
@@ -235,7 +232,7 @@
 
            <li class="categoty__product-item">
             <article class="product__card">
-              <a href="#" id="asia">
+              <a href="#" id="asias">
                 <img src="image/burger_king.jpg" alt="Королевский чизбургер" class="product__card-img" width="140" height="140">
                 <h3 class="product__card-text">Королевский чизбургер</h3>
               </a>
@@ -262,7 +259,7 @@
 
            <li class="categoty__product-item">
             <article class="product__card">
-              <a href="#" id="dish">
+              <a href="#" id="dishes">
                 <img src="image/chizburger.jpg" alt="Чикен бургер" class="product__card-img" width="140" height="140">
                 <h3 class="product__card-text">Чикен бургер</h3>
               </a>

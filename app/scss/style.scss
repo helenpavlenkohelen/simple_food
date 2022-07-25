@@ -65,6 +65,49 @@
 
 }
 
+
+
+ .user-nav__link-search {
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 1.3;
+   width: 44px;
+   height: 38px;
+   transition: all 0.5s, ease-in-out 0.5s;
+   border-radius: 3px;
+   position: relative;
+   color: $default;
+  //  background-color: $circl;
+ }
+
+.user-nav__link-search:before {
+   -webkit-mask-image: url("../image/sprite.svg#icon-search");
+ }
+
+
+.user-nav__link-search:before {
+       content: "";
+       position: absolute;
+       width: 44px;
+       height: 44px;
+       top: -4px;
+       left: 1px;
+       background-repeat: no-repeat;
+       mask-repeat: no-repeat;
+       mask-size: 22px;
+       mask-position: center;
+       background-color: $default;
+  
+}
+
+.user-nav__link-search:hover:before {
+  background-color: #fff;
+}
+
+.user-nav__link-search:hover {
+  background-color: $accent;
+}
+
  .user-nav {
   display: flex;
   position: relative;
@@ -78,11 +121,22 @@
     height: 38px;
     margin-right: 12px;
     border: 1px transparent;
-    background-color: $bacfon;
+    position: relative;
+    border-radius: 3px;
     transition: all 0.5s, ease-in-out 0.5s;
   }
-
-
+  &__link--cart {
+  
+        width: 44px;
+        height: 38px;
+        transition: all 0.5s, ease-in-out 0.5s;
+        border-radius: 3px;
+        position: absolute;
+        top: 6px;
+        left: 15px;
+    
+} 
+ 
   &__link--search {
       width: 44px;
       height: 38px;
@@ -95,53 +149,27 @@
   }
 
 
-  &__link--search:focus {
+  &__link:focus, 
+  &__link-search:focus {
       outline: 2px solid $accent;
       border-radius: 3px;
       background-color: $fone;
   }
 
 
-  &__link--search:hover {
-      background-color: $accent;
-      border-radius: 3px;
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
-  }
+  // &__link:hover {
+  //     background-color: $accent;
+  //     border-radius: 3px;
+  //     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
+  // }
 
-  &__link--search:active {
+  &__link:active,
+  &__link-search:active {
       background-color: $fone;
       outline: none;
   
   }
 
-  &__link--cart {
-       width: 44px;
-      height: 38px;
-      transition: all 0.5s, ease-in-out 0.5s;
-      border-radius: 3px;
-      position: absolute;
-      top: 6px;
-      left: 65px;
-  }
-
-
-  &__link--cart:focus {
-    outline: 2px solid $accent;
-    border-radius: 3px;
-    background-color: $fone;
-  }
- 
-  &__link--cart:hover {
-    background-color: $accent;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
-    border-radius: 3px;
-  }
-
-
-  &__link--cart:active {
-    background-color: $fone;
-    outline: none;
-  }
 
   &__namb {
     position: absolute;
@@ -150,9 +178,9 @@
     border-radius: 50%;
     font-size: 10px;
     text-align: center;
-    line-height: 14px;
+    line-height: 16px;
     color: #fff;
-    left: 79px;
+    left: 29px;
     top: 4px;
     background-color: $accent;
   }
@@ -216,34 +244,23 @@
 
  }
 
- .bur {
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  left: 14px;
-  top: 12px;
- &:hover { 
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(144deg) brightness(102%) contrast(102%);
-   
- }
- }
 
  .hero {
-    // max-width: 450px;
-    // padding-top: 158px;
-    // margin-right: 10px;
-    // position: absolute;
+   
+   background-repeat: no-repeat;
+   background-position:  980px  0;
+   background-size: 29%;
+   height: 71vh;
+  
   
 
-   &__inner {
-     display: flex;
-     justify-content: space-between;
-   }
 
    &__item {
+     display: inline-block;
      max-width: 450px;
      padding-top: 158px;
-     margin-right: 10px;
+ 
+    
    }
 
    &__title {
@@ -308,25 +325,6 @@
      transition: all 0.5s, ease-in-out 0.5s;
    }
 
-   &__link:focus {
-     outline: 2px solid $accent;
-     border-radius: 3px;
-     border-bottom: none;
-   }
-
-   &__link:hover {
-     outline: none;
-     border-radius: 3px;
-     border-bottom: none;
-     color: $accent;
-   }
-
-   &__link:active {
-     outline: none;
-     border-radius: 3px;
-     border-bottom: none;
-     color: $default;
-   }
 
    &__img img {
      display: inline;
@@ -357,6 +355,8 @@
     margin: 0 60px 60px 0;
     
   }
+
+
   &__menu-burger,
   &__menu-pizza,
   &__menu-sandwich,
@@ -370,10 +370,14 @@
     color: $default;
     background-color: $circl;
   }
+
+
   &__menu-burger {
     margin-top: 10px;
 
   }
+
+
   &__menu-burger:focus,
   &__menu-pizza:focus,
   &__menu-sandwich:focus,
@@ -383,6 +387,8 @@
     color: $default;
 
   }
+
+
   &__menu-burger:hover,
   &__menu-pizza:hover,
   &__menu-sandwich:hover,
@@ -391,6 +397,8 @@
     background-color: $fone;
     color: $accent;
   }
+
+
   &__menu-burger:active,
   &__menu-pizza:active,
   &__menu-sandwich:active,
@@ -400,34 +408,56 @@
     color: $circl;
   
   }
-  // &__menu-burger::before,
+
+
+  &__menu-burger::before,
   &__menu-pizza::before,
   &__menu-sandwich::before,
   &__menu-asia::before,
   &__menu-dish::before {
-    content: "";
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    top: 13px;
-    left: 24px;
+       content: "";
+       position: absolute;
+       width: 44px;
+       height: 44px;
+       top: 13px;
+       left: 24px;
+       mask-repeat: no-repeat;
+       mask-size: contain;
+       mask-position: center;
+       background-color: $default;
+
   }
+
   &__menu-burger::before {
-    background-image: url("/image/burger.svg");
-    
+    -webkit-mask-image: url("../image/sprite.svg#icon-burger");
   }
+
+
   &__menu-pizza::before {
-      background-image: url("/image/pizza 1.svg"); 
+    -webkit-mask-image: url("../image/sprite.svg#icon-pizza");
   }
+
   &__menu-sandwich::before {
-    background-image: url("/image/sandwich 1.svg");
+     -webkit-mask-image: url("../image/sprite.svg#icon-sandwich_1");
   }
+
   &__menu-asia::before {
-    background-image: url("/image/asia.svg");
+      -webkit-mask-image: url("../image/sprite.svg#icon-asia");
   }
+
   &__menu-dish::before {
-    background-image: url("/image/dish 1.svg");
+      -webkit-mask-image: url("../image/sprite.svg#icon-dish_1");
   }
+
+  &__menu-burger:hover:before,
+  &__menu-pizza:hover:before,
+  &__menu-sandwich:hover:before,
+  &__menu-asia:hover:before,
+  &__menu-dish:hover:before {
+    background-color: $circl;
+  }
+
+
   &__product-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -539,7 +569,7 @@
   &__input {
     max-width: 184px;
     margin: 0 0 5px 0;
-    padding: 10px 0 9px 14px;
+    padding: 10px 7px 9px 7px;
     border-radius: 5px;
     border: solid 1px $decor;
     color: $decor;
