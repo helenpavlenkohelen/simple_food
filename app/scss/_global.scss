@@ -17,6 +17,29 @@ body {
   padding-bottom: 110px;
 }
 
+
+.logo {
+   display: flex;
+   margin-right: 515px;
+
+
+  &:focus {
+     outline: 2px solid $accent;
+     border-radius: 3px;
+  }
+
+
+  &:hover {
+     opacity: 0.8;
+  }
+
+
+  &:active {
+     opacity: 0.3;
+  }
+
+ }
+
 .sr-only {
   position: absolute;
   width: 1px;

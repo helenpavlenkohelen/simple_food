@@ -41,18 +41,11 @@
 
             <div class="user-nav">
               <span class="sr-only">найти на сайте товар</span>
-              <a class="user-nav__link-search" href="#">
-                <!-- <svg id="search" class="user-nav__link--search">
-                  <use xlink:href="image/sprite.svg#icon-search" width="21" height="22" viewBox="0 0 21 22"></use>
-               </svg>
-               -->
+              <a class="user-nav__link-search user-nav__link" href="#">
               </a>
-             
               <span class="sr-only">перейти на страницу корзины</span>
-              <a class="user-nav__link" href="#">
-                <svg class="user-nav__link--cart">
-                  <use xlink:href="image/sprite.svg#icon-cart" width="21" height="22" viewBox="0 0 21 22"></use>
-                </svg>
+
+              <a class="user-nav__link-cart user-nav__link" href="#">
                 <span class="sr-only">количество выбранных товаров в корзине</span>
                 <span class="user-nav__namb">4</span>
               </a>
@@ -104,31 +97,31 @@
          <ul class="category__menu">
 
            <li class="category__menu-list category__burger">
-              <a class="button category__menu-burger" href="#burger">
+              <a class="button category__menu-burger category__menu-button" href="#burger">
                 Бургеры
               </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-pizza" href="#pizza">
+              <a class="button category__menu-pizza category__menu-button" href="#pizza">
                 Пицца
               </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-sandwich" href="#sandvich">
+              <a class="button category__menu-sandwich category__menu-button" href="#sandvich">
                 Сендвичи
               </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-asia" href="#asia">
+              <a class="button category__menu-asia category__menu-button" href="#asia">
                 Азиатская кухня
               </a>
            </li>
 
            <li class="category__menu-list">
-              <a class="button category__menu-dish" href="#dish">
+              <a class="button category__menu-dish category__menu-button" href="#dish">
                 Сеты
               </a>
            </li>
@@ -278,9 +271,58 @@
       </div>
     </section>
 
+    <section class="section delivery"  style="background-image: url('./image/delivery.png');">
+
+      <div class="container">
+
+        <div class="delivery__content">
+
+          <h3 class="delivery__title-inner">
+            <span class="sr-only">достака нашей продукции</span>
+            <span class="delivery__title">Оставайтесь дома,</span>
+           а мы позаботимся о еде</h3>
+
+          <div class="delivery__text">
+
+          <p>
+          У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и получите
+          скиидку!
+          </p>
+
+          </div>
+
+          <ul class="delivery__menu">
+
+           <li class="delivery__item">
+            
+            <a href="#" class="delivery__link 
+            delivery__link-time">Быстрая доставка за 15 минут</a>
+           </li>
+
+          <li class="delivery__item">
+            <a href="#" class="delivery__link delivery__link-delivery">Вежливые курьеры</a>
+          </li>
+
+          <li class="delivery__item">
+            <a href="#" class="delivery__link delivery__link-resturent">
+            Более 500 заведений</a>
+          </li>
+
+          </ul>
+          <span class="sr-only">кнопка для перехода для дополнительной информации о нашей достаки</span>
+          <button class="button delivery__button">Подробнее</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
   <footer class="footer">
+
+   <section class="footer__section">
 
     <div class="container">
 
@@ -300,6 +342,8 @@
            <button class="button footer__button" type="submit">Подписаться</button>
          </form>
       </div>
+
+      <h2 class="sr-only">меню нашего сайта</h2>
 
       <ul class="footer__top-menu"> 
 
@@ -348,29 +392,40 @@
         <address>
           <ul class="footer__top-list">
             <li class="footer__top-link">
-              <a class="footer__top-adress" href="https://goo.gl/maps/LBvz3eadA1yAHxkA8"><span class="sr-only">наш адрес</span>ул. Т.Г.Шевченко, 1</a>
+              <a class="footer__top-adress footer__top-general" href="https://goo.gl/maps/LBvz3eadA1yAHxkA8"><span class="sr-only">наш адрес</span>ул. Т.Г.Шевченко, 1</a>
             </li>
             <li class="footer__top-link">
-              <a class="footer__top-phone" href="tel:380501112233"><span class="sr-only">наш телефон</span>380501112233</a>
+              <a class="footer__top-phone footer__top-general" href="tel:380501112233"><span class="sr-only">наш телефон</span>380501112233</a>
             </li>
             <li class="footer__top-link">
-              <a class="footer__top-email" href="maito:support@sfood.com"><span class="sr-only">наш имеил</span>support@sfood.com</a>
+              <a class="footer__top-email footer__top-general" href="maito:support@sfood.com"><span class="sr-only">наш имейл</span>support@sfood.com</a>
             </li>
           </ul>
         </address>
         <ul class="footer__social-list"> 
-
           <li class="footer__social-item">
             <span class="sr-only">перейти на нашу страничку в фейсбук</span>
-            <a href="#" class="footer__social-link fasebook"></a>
+            <a href="#" class="footer__social-link fasebook">
+              <svg class="footer__social-link--fasebook">
+                <use xlink:href="image/sprite.svg#icon-fasebook_1"  viewBox="0 0 39 39"></use>
+              </svg>
+            </a>
           </li>
           <li class="footer__social-item">
             <span class="sr-only">перейти на нашу страничку в твитер</span>
-            <a href="#" class="footer__social-link twitter"></a>
+            <a href="#" class="footer__social-link twitter">
+              <svg  class="footer__social-link--twiter">
+                <use xlink:href="image/sprite.svg#icon-twitter" viewBox="0 0 39 39"></use>
+              </svg>
+            </a>
           </li>
           <li class="footer__social-item">
             <span class="sr-only">перейти на нашу страничку в инстаграм</span>
-            <a href="#" class="footer__social-link instagram"></a>
+            <a href="#" class="footer__social-link instagram">
+              <svg class="footer__social-link--instagram">
+                <use xlink:href="image/sprite.svg#icon-instagram" viewBox="0 0 39 39"></use>
+              </svg>
+            </a>
           </li>
 
         </ul>
@@ -383,6 +438,8 @@
       </div>
 
     </div>
+
+   </section>
 
   </footer>
 
