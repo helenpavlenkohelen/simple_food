@@ -1,6 +1,7 @@
  @import 'vars';
  @import 'fonts';
  @import 'reset';
+ @import 'libs';
  @import 'global';
 
 .header {
@@ -615,6 +616,7 @@
 
 
 .restaurants {
+  padding-bottom: 65px;
 
   &__title {
     margin-bottom: 45px;
@@ -772,10 +774,198 @@
 
 }
 
+
+
+.slider {
+  padding-bottom: 131px;
+
+  &__text {
+    position: relative;
+  }
+
+
+  &__text:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    top: -1px;
+    left: -42px;
+    background-image: url("/image/top.jpg");
+   
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    bottom: 149px;
+    right: 125px;
+    background-image: url("/image/bottom.jpg");
+  
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  &__title {
+    margin-bottom: 75px;
+  }
+
+  &__text {
+    max-width: 570px;
+    padding-right: 85px;
+  
+  }
+
+  &__text p {
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__name {
+    font-style: normal;
+    margin-bottom: 5px;
+    color: $accent;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+
+  &__reviews {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}
+
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+  li {
+    padding: 0 8px;
+  }
+
+  button {
+    padding: 0;
+    font-size: 0;
+    border-radius: 50%;
+    background-color: $decor;
+    width: 15px;
+    height: 15px;
+    border: transparent;
+
+   &:focus {
+      outline: 2px solid $accent;
+      
+   }
+
+   &:hover {
+    border: 2px solid $accent;
+   }
+  }
+
+
+}
+
+
+.slick-arrow {
+  border: transparent;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  font-size: 0;
+  background-color: transparent;
+  border: 3px solid $decor;
+
+  &:focus {
+    outline: 2px solid $accent;
+  } 
+  
+  &:hover {
+    border: 3px solid $accent;
+  }
+  
+}
+
+
+.slick-next {
+  position: absolute;
+  content: "";
+  top: 434px;
+  right: 469px;
+}
+
+
+.slick-next::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  right: -2px;
+  width: 35px;
+  height: 35px;
+  mask-repeat: no-repeat;
+  mask-size: 65px;
+  mask-position: center;
+  -webkit-mask-image: url("../image/sprite.svg#icon-vector__r");
+  background-color: $decor;
+  
+}
+
+.slick-next:hover::before {
+  background-color: $accent;
+}
+
+
+.slick-prev {
+  position: absolute;
+  content: "";
+  top: 434px;
+  right: 654px;
+}
+
+
+.slick-prev::before {
+  position: absolute;
+  content: "";
+  top: -2px;
+  right: -2px;
+  width: 35px;
+  height: 35px;
+  mask-repeat: no-repeat;
+  mask-size: 65px;
+  mask-position: center;
+  -webkit-mask-image: url("../image/sprite.svg#icon-vector_l");
+  background-color: $decor;
+
+}
+
+
+.slick-prev:hover::before {
+  background-color: $accent;
+}
+
 .mobile {
+
   background-repeat: no-repeat;
   background-position: 982px 0;
   height: 41vh;
+
 
   &-title {
     max-width: 400px;
@@ -784,6 +974,7 @@
     line-height: 1.3;
     padding: 42px 0 45px 0;
   }
+
 
   &-text {
     font-weight: 400;
@@ -795,6 +986,7 @@
 
   }
 
+
   &__button {
     position: relative;
     width: 118px;
@@ -805,15 +997,14 @@
     padding: 0;
   }
 
-  &__button+.mobile__button {
-    margin-left: 30px;
-  }
+
 
 
   &__app-store {
     width: 118px;
     height: 40px;
     padding: 0;
+    margin-right: 30px;
   }
 
 
@@ -823,10 +1014,12 @@
     padding: 0;
   }
 
+
   &__button::before {
     position: absolute;
     content: "";
   }
+
 
   &__google-play::before {
     background-image: url("../image/sprite.svg#icon-google");
@@ -836,6 +1029,7 @@
     top: -1px;
     background-repeat: no-repeat;
   }
+
 
   &__app-store::before {
     background-image: url("../image/sprite.svg#icon-app");
@@ -847,20 +1041,12 @@
   }
 
 
-  // &__button:focus {
-  //   outline: 2px solid $accent;
-  //   border-radius: 3px;
-  // }
-
-
   &__button:active {
     outline: 1px solid transparent;
     border-radius: 3px;
   }
 
 }
-
-
 
 .footer {
 

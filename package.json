@@ -21,7 +21,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "ansi-colors": "^1.1.0",
