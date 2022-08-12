@@ -1,6 +1,6 @@
 $ (function(){
    
-  $('.slider__inner').slick({
+  $('.reviews__inner').slick({
     dots: true
   });
 

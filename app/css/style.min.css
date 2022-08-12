@@ -394,6 +394,7 @@ body {
   display: inline-block;
   max-width: 450px;
   padding-top: 158px;
+  background-color: rgba(249, 250, 254, 0.4392156863);
 }
 .hero__title {
   font-weight: 500;
@@ -443,7 +444,7 @@ body {
   color: #FF6838;
 }
 .hero__link {
-  border-bottom: 1px solid #363853;
+  text-decoration: underline;
   padding-top: 2px;
   -webkit-transition: all 0.5s, ease-in-out 0.5s;
   -o-transition: all 0.5s, ease-in-out 0.5s;
@@ -561,7 +562,7 @@ body {
   margin: 0 auto;
   max-width: 155px;
   border: none;
-  border-bottom: 1px solid #363853;
+  text-decoration: underline;
   background-color: #F9FAFF;
   padding-top: 2px;
   -webkit-transition: all 0.5s, ease-in-out 0.5s;
@@ -613,6 +614,12 @@ body {
   text-align: center;
   margin-bottom: 8px;
   height: 40px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .link:focus {
@@ -624,7 +631,8 @@ body {
 .link:hover {
   outline: none;
   border-radius: 3px;
-  border-bottom: 1px solid transparent;
+  -webkit-text-decoration: transparent;
+          text-decoration: transparent;
   color: #FF6838;
 }
 
@@ -666,6 +674,12 @@ body {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 30px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .delivery__menu {
   font-weight: 400;
@@ -873,13 +887,19 @@ body {
   background-color: #FF6838;
 }
 
-.slider {
+.reviews {
   padding-bottom: 131px;
 }
-.slider__text {
+.reviews__text {
   position: relative;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
 }
-.slider__text:before {
+.reviews__text:before {
   content: "";
   position: absolute;
   width: 24px;
@@ -888,7 +908,7 @@ body {
   left: -42px;
   background-image: url("/image/top.jpg");
 }
-.slider__text::after {
+.reviews__text::after {
   content: "";
   position: absolute;
   width: 24px;
@@ -897,32 +917,38 @@ body {
   right: 125px;
   background-image: url("/image/bottom.jpg");
 }
-.slider__content {
+.reviews__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.slider__img {
+.reviews__img {
   width: 300px;
   height: 300px;
 }
-.slider__title {
+.reviews__title {
   margin-bottom: 75px;
 }
-.slider__text {
+.reviews__text {
   max-width: 570px;
   padding-right: 85px;
 }
-.slider__text p {
+.reviews__text p {
   margin-bottom: 30px;
   font-style: italic;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
 }
-.slider__name {
+.reviews__name {
   font-style: normal;
   margin-bottom: 5px;
   color: #FF6838;
@@ -930,7 +956,7 @@ body {
   font-size: 20px;
   line-height: 1.3;
 }
-.slider__reviews {
+.reviews__quote {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1278,59 +1304,90 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 7px;
-}
-.footer__social-link--fasebook {
-  width: 39px;
-  height: 39px;
-}
-.footer__social-link--twiter {
-  width: 39px;
-  height: 39px;
-}
-.footer__social-link--instagram {
-  width: 39px;
-  height: 39px;
-}
-.footer__social-link:focus {
-  outline: 2px solid #FF6838;
-  border-radius: 50%;
-}
-.footer__social-link--twiter:hover {
-  -webkit-filter: invert(68%) sepia(90%) saturate(4389%) hue-rotate(337deg) brightness(102%) contrast(101%);
-          filter: invert(68%) sepia(90%) saturate(4389%) hue-rotate(337deg) brightness(102%) contrast(101%);
-}
-.footer__social-link--fasebook:hover {
-  fill: #FF6838;
-  stroke: #FF6838;
-}
-.footer__social-link {
-  position: absolute;
-  width: 39px;
-  height: 39px;
+  padding: 7px 0 0 0;
 }
 .footer__top-list {
   padding: 0;
 }
-
-.about {
+.footer__social-item {
+  position: absolute;
+  background-color: #ECECEC;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s, ease-in-out 0.5s;
+  -o-transition: all 0.4s, ease-in-out 0.5s;
+  transition: all 0.4s, ease-in-out 0.5s;
+}
+.footer__social-item:hover {
+  background-color: #FF6838;
+}
+.footer__social-item:active {
+  background-color: #ECECEC;
+}
+.footer__social-item:nth-child(3) {
+  right: 518px;
+}
+.footer__social-item:nth-child(1) {
+  right: 32%;
+}
+.footer__social-item:nth-child(2) {
+  right: 570px;
+}
+.footer__social-item::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 7px;
+  left: 8px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 60px;
+          mask-size: 60px;
+  -webkit-mask-position: center;
+          mask-position: center;
+  background-color: #31352B;
+  -webkit-transition: all 0.5s, ease-in-out 0.5s;
+  -o-transition: all 0.5s, ease-in-out 0.5s;
+  transition: all 0.5s, ease-in-out 0.5s;
+}
+.footer__social-fasebook::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-fase");
+}
+.footer__social-fasebook:hover::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-fase");
+  background-color: #fff;
+}
+.footer__social-fasebook:active::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-fase");
+  background-color: #FF6838;
+}
+.footer__social-twitter::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-twitter_");
+}
+.footer__social-twitter:hover::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-twitter_");
+  background-color: #fff;
+}
+.footer__social-twitter:active::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-twitter_");
+  background-color: #FF6838;
+}
+.footer__social-instagram::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-instagram_");
+}
+.footer__social-instagram:hover::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-instagram_");
+  background-color: #fff;
+}
+.footer__social-instagram:active::before {
+  -webkit-mask-image: url("../image/sprite.svg#icon-instagram_");
+  background-color: #FF6838;
+}
+.footer__about {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
   color: #31352B;
-}
-
-.twitter {
-  right: 580px;
-  border-radius: 50%;
-}
-
-.instagram {
-  right: 528px;
-  border-radius: 50%;
-}
-
-.fasebook {
-  right: 633px;
-  border-radius: 50%;
 }
