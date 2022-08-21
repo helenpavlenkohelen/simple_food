@@ -343,6 +343,34 @@ body {
   color: #FF6838;
 }
 
+@media (max-width: 576px) {
+  .menu__list {
+    display: none;
+  }
+  .menu__btn {
+    width: 30px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .menu__btn::after, .menu__btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #363853;
+  }
+}
 .button {
   position: relative;
   background-color: #FF6838;
