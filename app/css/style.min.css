@@ -363,12 +363,18 @@ body {
             align-items: center;
     position: relative;
   }
-  .menu__btn::after, .menu__btn::before {
+  .menu__btn::after, .menu__btn:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 3px;
     background-color: #363853;
+  }
+  .menu__btn::after {
+    top: 0;
+  }
+  .menu__btn::before {
+    bottom: 0;
   }
 }
 .button {
