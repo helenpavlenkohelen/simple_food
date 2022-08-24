@@ -187,6 +187,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-right: 515px;
 }
 .logo:focus {
@@ -200,6 +203,32 @@ body {
   opacity: 0.3;
 }
 
+@media (max-width: 576px) {
+  .logo {
+    margin-right: 150px;
+    background-image: none;
+    background-image: url("../image/sprite.svg#icon-logo_m");
+    background-repeat: no-repeat;
+    height: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .logo__img {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 576px) {
+  .logo {
+    display: block;
+    margin-right: 65px;
+    background-image: url("../image/sprite.svg#icon-logo_m");
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 50px;
+  }
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -215,7 +244,7 @@ body {
 }
 
 .header {
-  padding: 60px 0;
+  padding: 60px 0 20px 0;
 }
 .header__inner {
   display: -webkit-box;
@@ -266,6 +295,9 @@ body {
 }
 .menu__item + .menu__item {
   padding-left: 45px;
+}
+.menu__btn {
+  display: none;
 }
 
 .user-nav {
@@ -344,24 +376,55 @@ body {
 }
 
 @media (max-width: 576px) {
+  .header__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 576px) {
+  .menu {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 10px;
+  }
   .menu__list {
     display: none;
   }
   .menu__btn {
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 25px;
     border: none;
     background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     position: relative;
+    padding: 0;
+    margin-right: 15px;
+  }
+  .menu__btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #363853;
+    display: block;
+    margin-top: 10px;
   }
   .menu__btn::after, .menu__btn:before {
     content: "";
@@ -371,10 +434,36 @@ body {
     background-color: #363853;
   }
   .menu__btn::after {
-    top: 0;
+    top: 5px;
   }
   .menu__btn::before {
-    bottom: 0;
+    bottom: -7px;
+  }
+  .user-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .user-nav__link {
+    margin-right: 30px;
+    top: 6px;
+  }
+  .user-nav__link::before {
+    -webkit-mask-size: 85px;
+            mask-size: 85px;
+  }
+  .user-nav__namb {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    left: 29px;
+    top: 6px;
+    background-color: #FF6838;
   }
 }
 .button {
@@ -490,6 +579,36 @@ body {
   background-color: #F9FAFF;
 }
 
+@media (max-width: 576px) {
+  .hero {
+    background-image: none;
+    background-position: 149px 13px;
+    background-size: 70%;
+    background-image: url("/image/scooter guy_.png");
+    width: 470px;
+    height: 63vh;
+    background-repeat: no-repeat;
+    background-color: rgb(249, 250, 255);
+  }
+  .hero__title {
+    padding-top: 0;
+    font-size: 53px;
+  }
+  .hero__item {
+    padding-top: 38px;
+    margin-left: 10px;
+    min-width: 600px;
+    height: 80vh;
+  }
+  .hero__title-text {
+    font-size: 55px;
+    margin-bottom: 24px;
+  }
+  .hero__text {
+    width: 400px;
+    margin-bottom: 33px;
+  }
+}
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -612,6 +731,13 @@ body {
   border-radius: 3px;
 }
 
+@media (max-width: 576px) {
+  .category__title {
+    min-width: 500px;
+    font-size: 32px;
+    text-align: center;
+  }
+}
 .product__card {
   background-color: #fff;
   padding: 20px;
@@ -1360,13 +1486,13 @@ body {
   background-color: #ECECEC;
 }
 .footer__social-item:nth-child(3) {
-  right: 518px;
+  right: 416px;
 }
 .footer__social-item:nth-child(1) {
-  right: 32%;
+  right: 521px;
 }
 .footer__social-item:nth-child(2) {
-  right: 570px;
+  right: 471px;
 }
 .footer__social-item::before {
   content: "";

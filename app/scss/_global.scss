@@ -13,6 +13,7 @@ body {
   padding: 0 15px;
 }
 
+
 .section {
   padding-bottom: 110px;
 }
@@ -20,6 +21,7 @@ body {
 
 .logo {
    display: flex;
+   justify-content: space-between;
    margin-right: 515px;
 
 
@@ -40,6 +42,42 @@ body {
 
  }
 
+ @media (max-width: 576px) {
+   .logo {
+     margin-right: 150px;
+     background-image: none;
+     background-image: url("../image/sprite.svg#icon-logo_m");
+     background-repeat: no-repeat;
+    //  width: 350px;
+     height: 50px;
+
+   }
+ }
+
+
+  @media (max-width: $sm) {
+    .logo__img {
+     display: none;
+     width: 0;
+     height: 0;
+    
+    }
+  }
+
+ @media (max-width: $sm) {
+
+   .logo {
+     display: block;
+      margin-right: 65px;
+      background-image: url("../image/sprite.svg#icon-logo_m");
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 50px;
+      
+    }
+ }
+
+ 
 .sr-only {
   position: absolute;
   width: 1px;
@@ -67,4 +105,5 @@ body {
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
   }
+
 }

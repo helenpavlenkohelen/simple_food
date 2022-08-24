@@ -5,7 +5,7 @@
  @import 'global';
 
 .header {
-  padding: 60px 0;
+  padding: 60px 0 20px 0;
 
   &__inner {
     display: flex;
@@ -53,7 +53,9 @@
     padding-left: 45px;
   }
 
-
+  &__btn {
+    display: none;
+  } 
 }
 
 
@@ -149,26 +151,51 @@
 
 }
 
+ @media (max-width: $sm) {
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+ }
 
  @media (max-width: $sm) {
 
   .menu {
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
 
     &__list {
       display: none;
+     
    }
 
     &__btn {
-      width: 30px;
-      height: 20px;
+      
+      width: 40px;
+      height: 25px;
       border: none;
       background-color: transparent;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       position: relative;
-    }
+      padding: 0;
+      margin-right: 15px;
+      
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $default;
+        display: block;
+        margin-top: 10px;
 
+        
+      }
+    }
+     
      &__btn::after,
      &__btn:before {
       content: "";
@@ -179,16 +206,56 @@
     }
 
      &__btn::after {
-       top: 0;
+       top: 5px;
+       
      }
 
      &__btn::before {
-      bottom: 0;
+      bottom: -7px;
      }
 
-   }
+  } 
+
+  
+
+  .user-nav {
+    display: flex;
+   
+   
+     &__link {
+      margin-right: 30px;
+      top: 6px;
+
+     }
+     &__link::before {
+      mask-size: 85px;
+     }
+
+
+     &__namb {
+       position: absolute;
+       width: 18px;
+       height: 18px;
+       border-radius: 50%;
+       font-size: 10px;
+       text-align: center;
+       line-height: 16px;
+       color: #fff;
+       left: 29px;
+       top: 6px;
+       background-color: $accent;
+     }
+
+
+    //  &__link-search {
+    //    margin-right: 30px;
+
+    //  }
 
   }
+
+ }
+
 
  
 
@@ -328,6 +395,53 @@
    }
 
  }
+
+  
+
+ @media (max-width: $sm) {
+
+    .hero {
+      background-image: none;
+      background-position: 149px 13px;
+      background-size: 70%;
+      background-image: url("/image/scooter guy_.png");
+      width: 470px;
+      height: 63vh;
+      background-repeat: no-repeat;
+      background-color: rgb(249, 250, 255);
+     
+
+      &__title {
+        padding-top: 0;
+        font-size: 53px;
+      }  
+      
+      &__item { 
+        padding-top: 38px;
+        margin-left: 10px;
+        min-width: 600px;
+        height: 80vh;
+      
+
+      
+      }
+
+      &__title-text {
+        font-size: 55px;
+        margin-bottom: 24px;
+       
+      }
+
+      &__text {
+        
+        width: 400px;
+        margin-bottom: 33px;
+      }
+     
+ 
+    }
+
+}
 
 
 .title {
@@ -482,6 +596,16 @@
   }
 
 
+}
+
+@media (max-width: $sm) {
+   .category {
+     &__title {
+      min-width: 500px;
+      font-size: 32px;
+      text-align: center;
+     }
+   }
 }
 
 .product__card {
@@ -1348,19 +1472,19 @@
 
 
   &__social-item:nth-child(3) {
-    right: 518px;
+    right: 416px;
 
   }
 
 
   &__social-item:nth-child(1) {
-    right: 32%;
+    right: 521px;
 
   }
 
 
   &__social-item:nth-child(2) {
-    right: 570px;
+    right: 471px;
 
   }
 
@@ -1440,13 +1564,5 @@
 
 }
  
-
-
-
-
-
-
-
-
 
  @import 'media';
