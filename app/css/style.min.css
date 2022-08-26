@@ -643,7 +643,7 @@ body {
   color: #363853;
   background-color: #fff;
 }
-.category__menu-burger {
+.category__menu {
   margin-top: 10px;
 }
 .category__menu-button:focus {
@@ -736,6 +736,23 @@ body {
     min-width: 500px;
     font-size: 32px;
     text-align: center;
+  }
+  .category__menu {
+    overflow-x: auto;
+  }
+  .category__menu-button {
+    margin-left: 30px;
+    background-color: #FF6838;
+    padding: 12px 16px 12px 40px;
+    font-size: 14px;
+  }
+  .category__menu-button::before {
+    -webkit-mask-size: 70px;
+            mask-size: 70px;
+    top: 12px;
+    left: 8px;
+    width: 23px;
+    height: 23px;
   }
 }
 .product__card {

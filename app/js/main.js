@@ -5,3 +5,9 @@ $ (function(){
   });
 
 });
+
+// $(function () {
+
+//   const mql = window.matchMedia('(max-width: 600px)');
+
+// });
