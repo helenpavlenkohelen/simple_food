@@ -246,12 +246,6 @@
        background-color: $accent;
      }
 
-
-    //  &__link-search {
-    //    margin-right: 30px;
-
-    //  }
-
   }
 
  }
@@ -315,7 +309,6 @@
      max-width: 450px;
      padding-top: 158px;
      background-color: #f9fafe70;
-    //  @include line-clamp(9)
    }
 
 
@@ -408,8 +401,12 @@
       width: 470px;
       height: 63vh;
       background-repeat: no-repeat;
-      background-color: rgb(249, 250, 255);
-     
+      // background-color: rgb(249, 250, 255, 0.5);
+
+
+     .container { 
+      background-color: rgb(255, 255, 255, 0.5);
+     }
 
       &__title {
         padding-top: 0;
@@ -602,40 +599,82 @@
 
    .category {
 
+    padding-bottom: 40px;
+
      &__title {
       min-width: 500px;
       font-size: 32px;
       text-align: center;
+      margin-bottom: 40px;
      }
 
      &__menu {
        overflow-x: auto;
+       max-width: 100%;
+       margin: 0  0 30px 0;
+       
      }
 
      &__menu-button {
-       margin-left: 30px;
-       background-color: $accent;
-       padding: 12px 16px 12px 40px;
-       font-size: 14px;
+       margin-left: 15px;
+       padding: 17px 20px 17px 55px;
+       font-size: 18px;
      }
 
      &__menu-button::before {
-        mask-size: 70px;
+        mask-size: 80px;
         top: 12px;
-        left: 8px;
-        width: 23px;
-        height: 23px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
     
       }
 
-    //  &__menu-asia {
-    //     max-width: 150px;
-    //  }
+     &__menu-asia {
+        max-width: 215px;
+        white-space: nowrap;
+        
+     }
+
+     &__product-list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+        padding: 0 29px 0 0;
+        margin-bottom: 30px;
+     }
+
+     &__product-item {
+        border-radius: 5px;
+        max-width: 150px;
+        margin-bottom: 10px;
+     }
+   
+     &__link {
+      font-size: 27px;
+      max-width: 192px;
+     }
+
    }
 
+ 
+
+} 
+
+
+@media (max-width: $sm) {
+
+    .product__card-text {
+
+       font-size: 30px;
+        
+    }
+
+    .product__card-text {
+      font-size: 15px;
+    }
 }
 
-     
 
 .product__card {
 
@@ -716,6 +755,7 @@
   background-position: 470px 7px;
   height: 71vh;
   padding-bottom: 45px;
+  
 
 
   &__content {
@@ -820,6 +860,79 @@
      -webkit-mask-image: url("../image/sprite.svg#icon-resturent");
   }
 }
+
+
+
+
+@media (max-width: $sm) {
+
+  .delivery {
+
+    
+      background-repeat: no-repeat;
+      background-position: 60px 10px; 
+      height: 110vh;
+      padding-bottom: 45px;
+      margin-bottom: 68px;
+
+      &__title {
+        font-size: 32px;
+        
+      }
+
+      &__title-inner {
+        margin-bottom: 35px;
+      }
+     
+      .container {
+        width: 100%;
+      }
+
+      &__content {
+        position: relative;
+        max-width: 460px;
+        height: 110vh;
+        display:block;
+        transform: translateX(0.1%);
+        padding: 46px  0 40px 40px;
+        background-color: rgb(255, 255, 255, 0.5);
+      }
+
+      &__text {
+        max-width: 390px;
+        @include line-clamp(4);
+        margin-bottom: 35px;
+      }
+
+
+      &__link:before {
+        mask-size: 140px;
+        width: 60px;
+        height: 54px;
+        top: -15px;
+        left: -65px;
+
+      }
+
+      &__menu {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 2.8;
+        padding-left: 56px;
+        margin-bottom: 25px;
+      
+      }
+
+     
+
+      &__button {
+        padding: 18px 50px 16px 42px;
+        border-radius: 8px;
+      }
+
+  }
+}
+
 
 
 .restaurants {

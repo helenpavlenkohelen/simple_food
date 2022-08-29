@@ -1,13 +1,31 @@
 $ (function(){
    
   $('.reviews__inner').slick({
-    dots: true
+    dots: true,
+    responsive: [{
+      breakpoint: 375,
+      settings: {
+        dots: false,
+      }
+    }]
   });
 
 });
 
-// $(function () {
 
-//   const mql = window.matchMedia('(max-width: 600px)');
 
-// });
+
+
+if (window.matchMedia("(min-width: 375px)").matches) {
+
+  $('.restaurants-item').slick('unslick');
+
+  sliderIslive = false;
+} else {
+  $('.restaurants-item').slick({
+    arrows: false,
+    fade: true,
+    dots: true
+  });
+  sliderIslive = true;
+};
