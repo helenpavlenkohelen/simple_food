@@ -3,7 +3,7 @@ $ (function(){
   $('.reviews__inner').slick({
     dots: true,
     responsive: [{
-      breakpoint: 375,
+      breakpoint: 576,
       settings: {
         dots: false,
       }
@@ -19,9 +19,10 @@ $ (function(){
 if (window.matchMedia("(min-width: 375px)").matches) {
 
   $('.restaurants-item').slick('unslick');
+    sliderIslive = false;
 
-  sliderIslive = false;
 } else {
+
   $('.restaurants-item').slick({
     arrows: false,
     fade: true,
