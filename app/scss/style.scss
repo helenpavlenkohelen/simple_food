@@ -224,11 +224,12 @@
    
      &__link {
       margin-right: 30px;
-      top: 6px;
+      top: -3px;
 
      }
      &__link::before {
       mask-size: 85px;
+
      }
 
 
@@ -374,7 +375,6 @@
 
    
    &__link {
-    //  border-bottom: 1px solid $default;
      text-decoration: underline;
      padding-top: 2px;
      transition: all 0.5s, ease-in-out 0.5s;
@@ -399,9 +399,9 @@
       background-size: 70%;
       background-image: url("/image/scooter guy_.png");
       width: 470px;
-      height: 63vh;
+      height: 45vh;
       background-repeat: no-repeat;
-      // background-color: rgb(249, 250, 255, 0.5);
+    
 
 
      .container { 
@@ -1219,7 +1219,27 @@
       position: relative;
       padding-top: 150px;
       padding-left: 30px;
+      padding-left: 20px;
+      max-width: 390px;
       
+    }
+
+    &__text p {
+      margin: 30px 0 0 0;
+      font-size: 21px;
+      line-height: 1.7;
+      padding-left: 50px;
+    @include line-clamp(9);
+    }
+
+    &__name {
+      font-style: normal;
+      margin-bottom: 5px;
+      color: $accent;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.3;
+      margin-top: 0;
     }
 
 
@@ -1229,11 +1249,11 @@
       background-repeat: no-repeat;
       background-image: url("/image/group_.jpg");
       background-size: 100%;
-      width: 132px;
-      height: 132px;
+      width: 150px;
+      height: 150px;
       transform: translateX(95%);
-      top: 0;
-      left: 0; 
+      top: 6px;
+      left: 52px; 
     
 
     }
@@ -1242,7 +1262,7 @@
       display: flex;
       justify-content: flex-start;
       margin-left: 50px;
-      font-size: 30px;
+      font-size: 34px;
       text-align: center;
       padding-bottom: 42px;
     }
@@ -1277,8 +1297,11 @@
   
 
 .slick-dots {
-  display: flex;
+
+  display: flex !important;
   justify-content: center;
+  margin: 0.5px;
+  
 
   li {
     padding: 0.8px;
@@ -1292,6 +1315,7 @@
     width: 15px;
     height: 15px;
     border: transparent;
+    margin: 5px;
 
    &:focus {
       outline: 2px solid $accent;
@@ -1311,8 +1335,6 @@
 
  
   .slick-dots {
-    
-    display: none;
 
     button {
       background-color: transparent;
@@ -1322,6 +1344,13 @@
   }
 
 }
+
+  .slick-next {
+    position: absolute;
+    content: "";
+    top: 434px;
+    right: 469px;
+  }
 
   .slick-arrow {
 
@@ -1351,7 +1380,7 @@
     width: 50px;
     height: 50px;
     background-size: 100%;
-    transform: translate(232px, -342px);
+    transform: translate(367px, -307px);
     
   }
 
@@ -1362,8 +1391,13 @@
   
   }
 
+  .slick-next {
+       top: 434px;
+       right: 290px;
+  }
+
   .slick-next::before {
-      position: absolute;
+          position: absolute;
           content: "";
           top: -4px;
           right: -2px;
@@ -1529,39 +1563,38 @@
 
   .mobile {
 
-    padding-bottom: 0;
+    padding-bottom: 35px;
 
     &-title {
-      font-size: 32px;
-      line-height: 1.2;
-      padding: 18px 0 18px 0;
+      font-size: 36px;
+      line-height: 1.3;
+      padding: 10px 0 23px 0;
     }
 
      &__google-play::before {
        background-image: url("../image/sprite.svg#icon-google");
-       width: 238px;
+       width: 270px;
        height: 60px;
-       left: 18px;
-       top: -12px;
+       left: 37px;
+       top: -7px;
        background-repeat: no-repeat;
      }
   
   
      &__app-store::before {
        background-image: url("../image/sprite.svg#icon-app");
-       width: 243px;
+       width: 268px;
        height: 60px;
-       left: -41px;
-       top: -12px;
+       left: -44px;
+       top: -8px;
        background-repeat: no-repeat;
      }
        
     &-text {
       font-weight: 400;
       font-size: 20px;
-      line-height: 1.4;
+      line-height: 1.5;
       max-width: 540px;
-      // margin-bottom: 31px;
     
     }
 
@@ -1918,48 +1951,136 @@
 
    .footer {
 
+      &__input {
+        max-width: 300px;
+        height: 43px;
+        margin: 0 0 20px 0;
+        padding: 10px 55px 9px 7px;
+        border-radius: 5px;
+        border: solid 1px $decor;
+        color: $decor;
+      }
+
+      &__button {
+         padding: 18px 58px 18px 100px;
+         font-weight: 400;
+         font-size: 22px;
+         position: relative;
+         transition: all 0.5s, ease-in-out 0.5s;
+         border-radius: 8px;
+         margin-bottom: 35px;
+      }
+
+
+      &__button::before {
+          content: "";
+          position: absolute;
+          width: 26px;
+          height: 26px;
+          top: 19px;
+          left: 56px;
+          mask-repeat: no-repeat;
+          mask-size: 80px;
+          mask-position: center;
+          -webkit-mask-image: url("../image/sprite.svg#icon-frame");
+          background-color: $circl;
+          transition: all 0.5s, ease-in-out 0.5s;
+      }
+
       &__logo .logo-footer__img {
-          margin-bottom: 43px;
-          
+          margin-bottom: 43px;   
       }
    
      &__social-item:nth-child(3) {
-       right: 416px;
-      
-  
+       right: 286px;
      }
   
   
      &__social-item:nth-child(1) {
-       right: 521px;
- 
-  
+       right: 442px;
      }
   
   
      &__social-item:nth-child(2) {
-       right: 471px;
-   
-
-      
-  
+       right: 364px;
      }
 
-         &__social-item::before {
-           content: "";
-          //  position: absolute;
-           width: 24px;
-           height: 24px;
-           top: 7px;
-           left: 8px;
-           mask-repeat: no-repeat;
-           mask-size: 60px;
-           mask-position: center;
-           background-color: $social;
-           transition: all 0.5s,
+    &__social-item {
+      
+      background-color: $soc;
+      width: 55px;
+      height: 55px;
+      // top: 50%;
+      border-radius: 50%;
+      transition: all 0.4s,
+        ease-in-out 0.5s;
+  
+    }
+
+
+     &__social-item::before {
+       content: "";
+       width: 37px;
+       height: 37px;
+       top: 8px;
+       left: 9px;
+       mask-repeat: no-repeat;
+       mask-size: 135px;
+       mask-position: center;
+       background-color: $social;
+       transition: all 0.5s,
              ease-in-out 0.5s;
-         }
+     }
+
+
+     &__inner {
+      display: flex;
+      flex-direction: column;
+     }
+
+
+     &__inner-media {
+      display: flex;
+      flex-direction: column-reverse;
+     }
+
+
+     &__top-item {
+      max-width: 224px;
+      margin: 0 0 94px 0;
+      padding-left: 50px;
+     }
+
+  
+    &__top-menu {
+      display: flex;
+      flex-direction: column;
+    }
            
+    &__top-general {
+      font-size: 24px;
+      line-height: 2.9;
+  
+    }
+
+    &__top-general::before {
+      width: 34px;
+      height: 34px;
+      top: 15px;
+      left: -47px;
+      mask-size: 164px;
+  
+    }
+
+    &__about {
+      font-size: 27px;
+      line-height: 2.4;
+  
+    }
+
+    &__bottom--text {
+      font-size: 20px;
+    }
 
    }
 
@@ -1971,15 +2092,13 @@
      background-repeat: no-repeat;
      background-image: url("../image/sprite.svg#icon-logo_b");
      background-repeat: no-repeat;
-     height: 55px;
-     width: 268px;
+     height: 68px;
+     width: 300px;
      margin-bottom: 4px;
 
    }
 
-  //  .footer__logo .logo-footer__img {
-  //     margin-bottom: 43px;
-  //  }
+  
 
  }
  
